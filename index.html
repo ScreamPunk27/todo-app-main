@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main id="app">
+        <section class="app-head">
+            <nav>
+                <div class="nav__logo">
+                    <h1>todo</h1>
+                </div>
+                <div class="nav__toggle">
+                    <img src="assets/img/icon-moon.svg" alt="">
+                </div>
+            </nav>
+
+            <div class="input-container">
+                <input type="text" name="" id="input-add" placeholder="Create a new todo...">
+                <span id="btn-add"></span>
+            </div>
+        </section>
+        <section class="app-list">
+           <div class="list"> 
+                <div class="filter">
+                    <div class="filter__left">
+                        <p><span id="items-left">0</span> items left</p>
+                    </div>
+                    <div class="filter__middle">
+                        <p id="all">All</p>
+                        <p id="active">Active</p>
+                        <p id="completed">Completed</p>
+                    </div>
+                    <div class="filter__right">
+                        <p id="clear-completed">Clear Completed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="assets/js/switch-mode.js"></script>
+    <script src="assets/js/todo.js"></script>
+</body>
+</html>

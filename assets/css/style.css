@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    /*LIGHT THEME*/
+    --veryLightGray:hsl(0, 0%, 98%);
+    --veryLightGrayish:hsl(236, 33%, 92%);
+    --lightGrayishBlue: hsl(233, 11%, 84%);
+    --darkGrayishBlue:hsl(236, 9%, 61%);
+    --veryDarkGrayishBlue:hsl(235, 19%, 35%);
+    
+    /*DARK THEME*/
+    --veryDarkBlue:hsl(235, 21%, 11%);
+    --veryDarkDesaturatedBlue:hsl(235, 24%, 19%);
+    --lightGrayishBlueD:hsl(234, 39%, 85%);
+    --lightGrayishBlueD-Hover:hsl(236, 33%, 92%);
+    --darkGrayishBlueD:hsl(234, 11%, 52%);
+    --veryDarkGrayishBlueD:hsl(233, 14%, 35%);
+    --veryDarkGrayishBlueD2:hsl(237, 14%, 26%);
+}
+
+#app{
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Josefin Sans',sans-serif;
+    background-color: var(--veryLightGray);
+}
+
+
+.app-head{
+    padding: 3rem 1.5rem;
+    background-image: url('../img/bg-mobile-light.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo h1{
+    font-size: calc(1.5rem + 1vw);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: #fff;
+}
+
+.nav__toggle{
+    cursor: pointer;
+}
+
+.input-container{
+   position: relative;
+   margin-top: 2rem;
+}
+
+.input-container input{
+    width: 100%;
+    padding: .8rem 0 .8rem 3rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: var(--darkGrayishBlue);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.input-container span{
+   position: absolute;
+   top: 50%;
+   left: 5%;
+   transform: translateY(-50%);
+   height: 20px;
+   width: 20px;
+   border: 1px solid var(--veryLightGrayish); 
+   border-radius: 50%;
+}
+
+.app-list{
+    background-color: var(--veryLightGray);
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+    background-color: var(--veryLightGray);
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem 1rem;
+    background:#fff;
+    list-style: none;
+    border-bottom: 2px solid var(--veryLightGrayish);
+    order: 99;
+    width: 100%;
+}
+
+.show-completed{
+    display: block;
+}
+
+.task img{
+    cursor: pointer;
+}
+
+.task__left{
+    display: flex;
+    align-items: center;
+}
+
+.task__left p{
+    margin-left: 0.5rem;
+}
+
+
+.check{
+   appearance: none;
+   cursor: pointer;
+   height: 20px;
+   width: 20px;
+   border-radius: 50%;
+   border: 2px solid var(--veryLightGrayish);
+}
+
+.check:checked{
+    /*background-image:linear-gradient(120deg,hsl(192, 100%, 67%),hsl(280, 87%, 65%)),url('../img/icon-check.svg');*/
+
+}
+
+
+.filter{
+    display: none;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem;
+    color:var(--darkGrayishBlue);
+    order: 100;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #fff;
+}
+
+.filter__middle{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 5px;
+    position: absolute;
+    top:70px;
+    left: 0;
+    background-color: #fff;
+}
+
+.filter__middle p{
+    cursor: pointer;
+    margin: 0 .5rem;
+}
+
+#clear-completed{
+    cursor: pointer;
+}
+
+
+
+/*LIGHT - DARK MODE*/
+
+.light-back{
+    background-image: url('../img/bg-desktop-light.jpg');
+}
+
+.dark-back{
+    background-image: url('../img/bg-desktop-dark.jpg');
+}
+
+
+@media screen and (min-width:600px){
+
+    .app-head{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('../img/bg-desktop-light.jpg');
+    }
+
+    nav{
+        width: 500px;
+    }
+
+    .input-container,.task,.filter{
+        width: 500px;
+    }
+
+    .input-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .app-list{
+        align-items: center;
+    }
+
+    .list{
+        
+    }
+
+
+}
