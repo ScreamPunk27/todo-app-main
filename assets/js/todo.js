@@ -17,9 +17,18 @@ const btnCompleted=document.getElementById('completed');
 let numberTasks=[];
 
 
-
+document.addEventListener('keypress',(e)=>{
+    if(e.code=='Enter'){
+       addTask();
+    }
+});
 
 btnAdd.addEventListener('click',()=>{
+    addTask();
+});
+
+
+const addTask=()=>{
     if(input.value!=''){
         numberID++;
 
@@ -49,8 +58,7 @@ btnAdd.addEventListener('click',()=>{
     }else{
         alert('Please enter a task in the input field.');
     }
-});
-
+}
 
 const updateTask=(task)=>{
     task.addEventListener('click',(e)=>{
