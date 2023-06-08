@@ -34,6 +34,7 @@
 
 
 .app-head{
+    position: relative;
     padding: 3rem 1.5rem;
     background-image: url('../img/bg-mobile-light.jpg');
     background-size: cover;
@@ -83,14 +84,20 @@ nav{
 }
 
 .app-list{
+    display: flex;
+    justify-content: center;
     background-color: var(--veryLightGray);
+    padding: 0 1.5rem;
 }
 
 .list{
+    position: absolute;
+    top: 170px;
     display: flex;
     flex-direction: column;
-    padding: 0 1.5rem;
     background-color: var(--veryLightGray);
+    width: 100%;
+    padding: 0 1.5rem;
 }
 
 .task{
@@ -101,7 +108,7 @@ nav{
     list-style: none;
     border-bottom: 2px solid var(--veryLightGrayish);
     order: 99;
-    width: 100%;
+    
 }
 
 .show-completed{
@@ -132,10 +139,8 @@ nav{
 }
 
 .check:checked{
-    /*background-image:linear-gradient(120deg,hsl(192, 100%, 67%),hsl(280, 87%, 65%)),url('../img/icon-check.svg');*/
-
+    background-image:linear-gradient(120deg,hsl(192, 100%, 67%),hsl(280, 87%, 65%)),url('../img/icon-check.svg');
 }
-
 
 .filter{
     display: none;
@@ -171,16 +176,8 @@ nav{
     cursor: pointer;
 }
 
-
-
-/*LIGHT - DARK MODE*/
-
-.light-back{
-    background-image: url('../img/bg-desktop-light.jpg');
-}
-
-.dark-back{
-    background-image: url('../img/bg-desktop-dark.jpg');
+#all:hover,#active:hover,#completed:hover{
+    color: var(--veryDarkBlue);
 }
 
 
@@ -191,6 +188,7 @@ nav{
         flex-direction: column;
         align-items: center;
         background-image: url('../img/bg-desktop-light.jpg');
+        height: 40vh;
     }
 
     nav{
@@ -207,12 +205,25 @@ nav{
     }
 
     .app-list{
+        height: 60vh;
         align-items: center;
     }
 
     .list{
+        top: 200px;
+        align-items: center;
+        background: transparent;
+    }
+
+    .task{
         
     }
 
+}
 
+@media screen and (min-width:800px){
+
+    .app-head{
+        padding: 4rem 1.5rem;
+    }
 }

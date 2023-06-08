@@ -1,0 +1,52 @@
+:root{
+    --veryDarkBlue:hsl(235, 21%, 11%);
+    --veryDarkDesaturatedBlue:hsl(235, 24%, 19%);
+    --lightGrayishBlueD:hsl(234, 39%, 85%);
+    --lightGrayishBlueD-Hover:hsl(236, 33%, 92%);
+    --darkGrayishBlueD:hsl(234, 11%, 52%);
+    --veryDarkGrayishBlueD:hsl(233, 14%, 35%);
+    --veryDarkGrayishBlueD2:hsl(237, 14%, 26%);
+}
+
+.darkmode, .darkmode #app, .darkmode #app .app-list{
+    background-color: var(--veryDarkBlue);
+}
+
+.darkmode #app .app-head{
+    background-image: url('../img/bg-mobile-dark.jpg');
+}
+
+.darkmode #app .app-head .input-container #input-add{
+    background-color: var(--veryDarkDesaturatedBlue);
+    color:var(--lightGrayishBlueD);
+}
+
+.darkmode #app .app-list .task{
+    background-color: var(--veryDarkDesaturatedBlue);
+    color: var(--lightGrayishBlueD);
+    border-bottom: 1px solid var(--veryDarkGrayishBlueD);
+}
+
+.darkmode #app .app-list .filter{
+    background-color: var(--veryDarkDesaturatedBlue);
+}
+
+.darkmode #app .app-list .filter__middle{
+    background-color: var(--veryDarkDesaturatedBlue);
+}
+
+.darkmode #app .app-list .filter__middle{
+    background-color: var(--veryDarkDesaturatedBlue);
+}
+
+.darkmode #app .app-list .filter__middle #all:hover, .darkmode #app .app-list .filter__middle #active:hover, .darkmode #app .app-list .filter__middle #completed:hover{
+    color:var(--lightGrayishBlueD-Hover);
+}
+
+
+
+@media screen and (min-width:600px){
+    .darkmode #app .app-head{
+        background-image: url('../img/bg-desktop-dark.jpg');
+    }
+}

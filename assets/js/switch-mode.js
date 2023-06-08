@@ -1,18 +1,11 @@
-const btnSwitch=document.querySelector('.nav__toggle');
+const imgSwitchMode=document.getElementById('img-mode');
 
 
-let modeDark=false;
-
-btnSwitch.addEventListener('click',()=>{
-    if(modeDark==true){
-        document.querySelector('.app-head').classList.remove('dark-back');
-        document.querySelector('.app-list').style.background='#fff';
-        modeDark=false;
+imgSwitchMode.addEventListener('click',()=>{
+    document.body.classList.toggle('darkmode');
+    if(document.body.classList.contains('darkmode')){
+        imgSwitchMode.setAttribute('src','assets/img/icon-sun.svg');
     }else{
-        document.querySelector('.app-head').classList.add('dark-back');
-        document.querySelector('.app-list').style.background='var(--veryDarkBlue)';
-        document.querySelectorAll('.task').style.background='var(--veryDarkDesaturatedBlue)';
-        modeDark=true;
-
+        imgSwitchMode.setAttribute('src','assets/img/icon-moon.svg');
     }
 });
