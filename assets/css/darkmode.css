@@ -21,7 +21,11 @@
     color:var(--lightGrayishBlueD);
 }
 
-.darkmode #app .app-list .task{
+.darkmode #app .app-list .list{
+    background-color: transparent;
+}
+
+.darkmode #app .app-list .list .task{
     background-color: var(--veryDarkDesaturatedBlue);
     color: var(--lightGrayishBlueD);
     border-bottom: 1px solid var(--veryDarkGrayishBlueD);
